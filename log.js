@@ -1,12 +1,12 @@
 (function(window) {
 
-	window.debug = debug;
-	var debugging = (!window.debugging)? true : false;
+	window.log = log;
+	var logging = (!window.logging)? true : false;
 
 	// trace(feedback, ['console', 'overlay', 'alert'])
-	function debug(feedback, location) {
+	function log(feedback, location) {
 
-		if (debugging == true) {
+		if (logging == true) {
 
 			// Set default console.log when no specific location is given
 			location = (typeof location !== 'undefined')? location : ['console'];
