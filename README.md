@@ -1,4 +1,4 @@
-debug
+log
 =====
 
-A little debug script
+A little debug log script
