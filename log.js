@@ -3,16 +3,16 @@
 	window.log = log;
 	var logging = (!window.logging)? true : false;
 
-	// trace(feedback, ['console', 'overlay', 'alert'])
-	function log(feedback, location) {
+	// log(feedback, ['console', 'overlay', 'alert'])
+	function log(feedback, area) {
 
 		if (logging == true) {
 
-			// Set default console.log when no specific location is given
-			location = (typeof location !== 'undefined')? location : ['console'];
+			// Set default console.log when no specific area is given
+			area = (typeof area !== 'undefined')? area : ['console'];
 
 			// Overlay in page
-			if (location.indexOf('overlay') != -1) {
+			if (area.indexOf('overlay') != -1) {
 
 				// If console does not exist in page, create it
 				if (document.getElementById('console') == null) {
@@ -45,10 +45,10 @@
 			}
 
 			// Console log of browser
-			if (location.indexOf('console') != -1) { console.log(feedback); }
+			if (area.indexOf('console') != -1) { console.log(feedback); }
 
 			// Alert pop-up
-			if (location.indexOf('alert') != -1) { alert(feedback); }
+			if (area.indexOf('alert') != -1) { alert(feedback); }
 		}
 		else {
 			return false;
